@@ -1,5 +1,0 @@
-aaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbbbbbb
-ccccccccccccccccccccc
-插入的数据
-测试pull命令
