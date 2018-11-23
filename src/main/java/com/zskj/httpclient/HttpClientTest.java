@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Hello world!
  */
-public class App {
+public class HttpClientTest {
     public static void main(String[] args) {
         String url = "http://127.0.0.1:8080/v1/hello/put";
         Map<String, String> paramMap = new HashMap<>();
