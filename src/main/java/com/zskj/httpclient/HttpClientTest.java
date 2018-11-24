@@ -23,7 +23,6 @@ public class HttpClientTest {
 				String result = HttpClientUtils.post(url, paramMap);
 				System.out.println(Thread.currentThread().getName() + "：" + result);
 			}).start();
-			System.out.println(i);
 		}
 	}
 }
