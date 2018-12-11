@@ -113,7 +113,7 @@ public class HttpClientUtils {
     private static String execute(CloseableHttpClient httpclient, HttpRequestBase httpRequestBase) {
         String responseResult = null;
         try {
-            ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
+            responseResult = httpclient.execute(httpRequestBase, new ResponseHandler<String>() {
                 @Override
                 public String handleResponse(final HttpResponse response) throws ClientProtocolException, IOException {
                     int status = response.getStatusLine().getStatusCode();
@@ -124,8 +124,7 @@ public class HttpClientUtils {
                         throw new ClientProtocolException("Unexpected response status: " + status);
                     }
                 }
-            };
-            responseResult = httpclient.execute(httpRequestBase, responseHandler);
+            });
         } catch (ClientProtocolException e) {
             e.printStackTrace();
         } catch (IOException e) {
